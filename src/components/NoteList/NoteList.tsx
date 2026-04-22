@@ -22,6 +22,8 @@ export default function NoteList({ notes }: NoteListProps) {
     },
   });
 
+  if (notes.length === 0) return null;
+
   return (
     <>
       <ul className={css.list}>
