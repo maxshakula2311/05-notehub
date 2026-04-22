@@ -62,7 +62,7 @@ function App() {
       </header>
       <Toaster />
       {isPending && <Loader />}
-      {isError ? <ErrorMessage /> : <NoteList notes={notes} />}
+      {isError ? <ErrorMessage /> : notes.length > 0 && <NoteList notes={notes} />}
       {isModalOpen && (
         <Modal onClose={closeModal}>
           <NoteForm onClose={closeModal} />
